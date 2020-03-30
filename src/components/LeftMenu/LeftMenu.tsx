@@ -20,7 +20,7 @@ function LeftMenu() {
       </li>
       <li>
         <Link to="/UserList">
-          <StyledLabel>사용자조회</StyledLabel>
+          <StyledLabel>GitHub 사용자</StyledLabel>
         </Link>
       </li>
     </List>
