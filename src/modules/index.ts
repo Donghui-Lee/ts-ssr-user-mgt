@@ -2,8 +2,12 @@ import { combineReducers } from "redux";
 import userForm from "./userform";
 import { githubUser } from "./userform";
 import { all } from "redux-saga/effects";
+import authLogin from './authLogin';
+import authRegister from './authRegister';
 
 const rootReducer = combineReducers({
+  authLogin,
+  authRegister,
   userForm
 });
 

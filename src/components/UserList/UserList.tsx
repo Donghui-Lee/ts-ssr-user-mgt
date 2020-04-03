@@ -1,5 +1,13 @@
 import React from "react";
+import styled from 'styled-components';
 import { GithubProfileList } from "../../lib/github";
+
+
+
+const STyledImg = styled.img`
+  width: 200px;
+  height: 200px;
+`;
 
 type UserListPros = {
   userList: GithubProfileList;
@@ -24,7 +32,7 @@ function UserList(userList: UserListPros) {
             <tbody key={user.id}>
               <tr>
                 <td>
-                  <img src={user.avatar_url} alt="user thumbnail" />
+                  <STyledImg src={user.avatar_url} alt="user thumbnail" />
                 </td>
                 <td>{user.login}</td>
                 <td>{user.html_url}</td>

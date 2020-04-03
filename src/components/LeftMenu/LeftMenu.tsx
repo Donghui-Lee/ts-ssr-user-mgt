@@ -14,7 +14,7 @@ function LeftMenu() {
   return (
     <List>
       <li>
-      <Link to="/">
+      <Link to="/Main">
           <StyledLabel>HOME</StyledLabel>
         </Link>
       </li>

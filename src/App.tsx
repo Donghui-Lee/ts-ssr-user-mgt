@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/ResiterPage';
 import MainPage from "./pages/MainPage";
 import UserListPage from "./pages/UserListPage";
 import LeftMenu from "./components/LeftMenu";
@@ -30,14 +32,19 @@ const StyledContext = styled.div`
 function App() {
   return (
     <BrowserRouter>
+
+      <Route component={LoginPage} path="/" exact/>
+      <Route component={LoginPage} path="/login"/>
+      <Route component={RegisterPage} path="/register" />
+
       <StyledBoard>
         <StyledLeftMenu>
           <LeftMenu />
         </StyledLeftMenu>
         <StyledContext>
           <Switch>
-            <Route exact path="/" component={MainPage} />
-            <Route path="/UserList" component={UserListPage} />
+            <Route component={MainPage} path="/Main" />
+            <Route component={UserListPage} path="/UserList" />
           </Switch>
         </StyledContext>
       </StyledBoard>
